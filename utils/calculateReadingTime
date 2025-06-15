@@ -1,0 +1,6 @@
+module.exports = function calculateReadingTime(text) {
+    const wordsPerMinute = 200; // Average reading speed
+    const words = text.trim().split(/\s+/).length; // Split by whitespace
+    const time = Math.ceil(words / wordsPerMinute); // Calculate time in minutes
+    return `${time} min read`;
+};
